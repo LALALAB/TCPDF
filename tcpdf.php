@@ -2921,11 +2921,7 @@ class TCPDF {
 	public function Error($msg) {
 		// unset all class variables
 		$this->_destroy(true);
-		if (defined('K_TCPDF_THROW_EXCEPTION_ERROR') AND !K_TCPDF_THROW_EXCEPTION_ERROR) {
-			die('<strong>TCPDF ERROR: </strong>'.$msg);
-		} else {
-			throw new Exception('TCPDF ERROR: '.$msg);
-		}
+		throw new Exception('TCPDF ERROR: '.$msg);
 	}
 
 	/**

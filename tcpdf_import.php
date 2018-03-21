@@ -81,7 +81,7 @@ class TCPDF_IMPORT extends TCPDF {
 			// parse PDF data
 			$pdf = new TCPDF_PARSER($rawdata, $cfg);
 		} catch (Exception $e) {
-			die($e->getMessage());
+			throw new Exception('TCPDF ERROR: '.$e->getMessage());
 		}
 		// get the parsed data
 		$data = $pdf->getParsedData();

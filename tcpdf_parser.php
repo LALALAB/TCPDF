@@ -801,11 +801,7 @@ class TCPDF_PARSER {
 	 * @since 1.0.000 (2011-05-23)
 	 */
 	public function Error($msg) {
-		if ($this->cfg['die_for_errors']) {
-			die('<strong>TCPDF_PARSER ERROR: </strong>'.$msg);
-		} else {
-			throw new Exception('TCPDF_PARSER ERROR: '.$msg);
-		}
+		throw new Exception('TCPDF_PARSER ERROR: '.$msg);
 	}
 
 } // END OF TCPDF_PARSER CLASS
